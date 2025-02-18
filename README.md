@@ -1,22 +1,16 @@
-# ChatGPT Lite
+# GridGPT Lite
 
 English | [简体中文](./README.zh-CN.md)
 
-## Demo
-
-Visit the [ChatGPT Lite Demo Site](https://bit.ly/chatgpt-lite)
-
 ## Features
 
-ChatGPT Lite is a lightweight ChatGPT web interface developed using Next.js and the [OpenAI Chat API](https://platform.openai.com/docs/api-reference/chat). It's compatible with both OpenAI and Azure OpenAI accounts.
+GridGPT Lite is a lightweight GridGPT web interface developed using Next.js and the [OpenAI Chat API](https://platform.openai.com/docs/api-reference/chat). It's compatible with both OpenAI and Azure OpenAI accounts.
 
-- Deploy a custom ChatGPT web interface that supports markdown, prompt storage, and multi-person chats.
-- Create a private, web-based ChatGPT for use among friends without sharing your API key.
+- Deploy a custom GridGPT web interface that supports markdown, prompt storage, and multi-person chats.
+- Create a private, web-based GridGPT for use among friends without sharing your API key.
 - Clear and expandable codebase, ideal as a starting point for your next AI Next.js project.
 
-![demo](./docs/images/demo.jpg)
-
-For a beginner-friendly version of the ChatGPT UI codebase, visit [ChatGPT Minimal](https://github.com/blrchen/chatgpt-minimal).
+For a beginner-friendly version of the GridGPT UI codebase, visit [GridGPT Minimal](https://github.com/blrchen/chatgpt-minimal).
 
 ## Prerequisites
 
@@ -25,34 +19,6 @@ You need an OpenAI or Azure OpenAI account.
 ## Deployment
 
 Refer to the [Environment Variables](#environment-variables) section for necessary environment variables.
-
-### Deploy on Vercel
-
-Click the button below to deploy on Vercel:
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fblrchen%2Fchatgpt-lite&project-name=chatgpt-lite&framework=nextjs&repository-name=chatgpt-lite)
-
-### Deploy with Docker
-
-For OpenAI account users:
-
-```
-docker run -d -p 3000:3000 \
-   -e OPENAI_API_KEY="<REPLACE-ME>" \
-   blrchen/chatgpt-lite
-```
-
-For Azure OpenAI account users:
-
-```
-docker run -d -p 3000:3000 \
-   -e AZURE_OPENAI_API_BASE_URL="<REPLACE-ME>" \
-   -e AZURE_OPENAI_API_KEY="<REPLACE-ME>" \
-   -e AZURE_OPENAI_DEPLOYMENT="<REPLACE-ME>" \
-   blrchen/chatgpt-lite
-```
-
-## Development
 
 ### Running Locally
 

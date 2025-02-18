@@ -20,7 +20,7 @@ export const ChatSideBar = () => {
     onDeleteChat,
     onChangeChat,
     onCreateChat,
-    onOpenPersonaPanel
+    onCloseAboutPanel
   } = useContext(ChatContext)
 
   return (
@@ -68,14 +68,14 @@ export const ChatSideBar = () => {
             ))}
           </Flex>
         </ScrollArea>
-        <Box
+        {/* <Box
           width="auto"
-          onClick={() => onOpenPersonaPanel?.('chat')}
+          onClick={() => onCloseAboutPanel?.('chat')}
           className="bg-token-surface-primary active:scale-95 cursor-pointer"
         >
           <RiRobot2Line className="size-4" />
           <Text>Persona Store</Text>
-        </Box>
+        </Box> */}
       </Flex>
     </Flex>
   )

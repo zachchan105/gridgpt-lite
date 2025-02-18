@@ -1,22 +1,22 @@
-# ChatGPT Lite
+# GridGPT Lite
 
 [English](./README.md) | 简体中文
 
 ## 演示
 
-访问 [ChatGPT Lite 演示网站](https://bit.ly/chatgpt-lite)
+访问 [GridGPT Lite 演示网站](https://bit.ly/chatgpt-lite)
 
 ## 功能
 
-ChatGPT Lite是一个基于Next.js和[OpenAI Chat API](https://platform.openai.com/docs/api-reference/chat)的网站程序，兼容OpenAI和Azure OpenAI账户。
+GridGPT Lite是一个基于Next.js和[OpenAI Chat API](https://platform.openai.com/docs/api-reference/chat)的网站程序，兼容OpenAI和Azure OpenAI账户。
 
-- 部署个性化ChatGPT程序，支持Markdown显示，提示词商店，多角色对话等。
-- 创建供朋友使用的ChatGPT程序，无需共享API密钥。
+- 部署个性化GridGPT程序，支持Markdown显示，提示词商店，多角色对话等。
+- 创建供朋友使用的GridGPT程序，无需共享API密钥。
 - 提供清晰易读的代码，便于扩展，适合作为你的下一个AI Next.js项目的起点。
 
 ![演示](./docs/images/demo.zh-CN.jpg)
 
-如需对初学者友好的ChatGPT UI代码库，请访问[ChatGPT Minimal](https://github.com/blrchen/chatgpt-minimal)。
+如需对初学者友好的GridGPT UI代码库，请访问[GridGPT Minimal](https://github.com/blrchen/chatgpt-minimal)。
 
 ## 前提条件
 

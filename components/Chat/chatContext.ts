@@ -5,18 +5,18 @@ import { Chat, ChatMessage, Persona } from './interface'
 
 const ChatContext = createContext<{
   debug?: boolean
-  personaPanelType: string
+  aboutPanelType: string
   DefaultPersonas: Persona[]
   currentChatRef?: MutableRefObject<Chat | undefined>
   chatList: Chat[]
   personas: Persona[]
-  isOpenPersonaModal?: boolean
+  isOpenAboutModal?: boolean
   editPersona?: Persona
-  personaModalLoading?: boolean
-  openPersonaPanel?: boolean
+  aboutModalLoading?: boolean
+  openAboutPanel?: boolean
   toggleSidebar?: boolean
-  onOpenPersonaModal?: () => void
-  onClosePersonaModal?: () => void
+  onOpenAboutModal?: () => void
+  onCloseAboutModal?: () => void
   setCurrentChat?: (chat: Chat) => void
   onCreatePersona?: (persona: Persona) => void
   onDeleteChat?: (chat: Chat) => void
@@ -25,12 +25,12 @@ const ChatContext = createContext<{
   onCreateChat?: (persona: Persona) => void
   onChangeChat?: (chat: Chat) => void
   saveMessages?: (messages: ChatMessage[]) => void
-  onOpenPersonaPanel?: (type?: string) => void
-  onClosePersonaPanel?: () => void
+  onOpenAboutPanel?: (type?: string) => void
+  onCloseAboutPanel?: () => void
   onToggleSidebar?: () => void
   forceUpdate?: () => void
 }>({
-  personaPanelType: 'chat',
+  aboutPanelType: 'chat',
   DefaultPersonas: [],
   chatList: [],
   personas: []

@@ -83,11 +83,11 @@ const getOpenAIStream = async (
     body: JSON.stringify({
       model: model,
       frequency_penalty: 0,
-      max_tokens: 4000,
+      max_tokens: 500,
       messages: messages,
       presence_penalty: 0,
       stream: true,
-      temperature: 0.5,
+      temperature: 0.7,
       top_p: 0.95
     })
   })

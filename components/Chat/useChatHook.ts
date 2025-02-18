@@ -12,7 +12,7 @@ export const DefaultPersonas: Persona[] = [
   {
     id: 'chatgpt',
     role: 'system',
-    name: 'ChatGPT',
+    name: 'GridGPT',
     prompt: 'You are an AI assistant that helps people find information.',
     isDefault: true
   },
@@ -67,32 +67,32 @@ const useChatHook = () => {
 
   const [editPersona, setEditPersona] = useState<Persona | undefined>()
 
-  const [isOpenPersonaModal, setIsOpenPersonaModal] = useState<boolean>(false)
+  const [isOpenAboutModal, setIsOpenAboutModal] = useState<boolean>(false)
 
-  const [personaModalLoading, setPersonaModalLoading] = useState<boolean>(false)
+  const [aboutModalLoading, setAboutModalLoading] = useState<boolean>(false)
 
-  const [openPersonaPanel, setOpenPersonaPanel] = useState<boolean>(false)
+  const [openAboutPanel, setOpenAboutPanel] = useState<boolean>(false)
 
-  const [personaPanelType, setPersonaPanelType] = useState<string>('')
+  const [aboutPanelType, setAboutPanelType] = useState<string>('')
 
   const [toggleSidebar, setToggleSidebar] = useState<boolean>(false)
 
-  const onOpenPersonaPanel = (type: string = 'chat') => {
-    setPersonaPanelType(type)
-    setOpenPersonaPanel(true)
+  const onOpenAboutPanel = (type: string = 'chat') => {
+    setAboutPanelType(type)
+    setOpenAboutPanel(true)
   }
 
-  const onClosePersonaPanel = useCallback(() => {
-    setOpenPersonaPanel(false)
-  }, [setOpenPersonaPanel])
+  const onCloseAboutPanel = useCallback(() => {
+    setOpenAboutPanel(false)
+  }, [setOpenAboutPanel])
 
-  const onOpenPersonaModal = () => {
-    setIsOpenPersonaModal(true)
+  const onOpenAboutModal = () => {
+    setIsOpenAboutModal(true)
   }
 
-  const onClosePersonaModal = () => {
+  const onCloseAboutModal = () => {
     setEditPersona(undefined)
-    setIsOpenPersonaModal(false)
+    setIsOpenAboutModal(false)
   }
 
   const onChangeChat = useCallback((chat: Chat) => {
@@ -118,9 +118,9 @@ const useChatHook = () => {
       })
 
       onChangeChat(newChat)
-      onClosePersonaPanel()
+      onCloseAboutPanel()
     },
-    [setChatList, onChangeChat, onClosePersonaPanel]
+    [setChatList, onChangeChat, onCloseAboutPanel]
   )
 
   const onToggleSidebar = useCallback(() => {
@@ -136,7 +136,7 @@ const useChatHook = () => {
       currentChatRef.current = chatList[0]
     }
     if (chatList.length === 0) {
-      onOpenPersonaPanel('chat')
+      onOpenAboutPanel('chat')
     }
   }
 
@@ -152,14 +152,14 @@ const useChatHook = () => {
 
     if (type === 'document') {
       try {
-        setPersonaModalLoading(true)
+        setAboutModalLoading(true)
         const data = await uploadFiles(files)
         persona.key = data.key
       } catch (e) {
         console.log(e)
         toast.error('Error uploading files')
       } finally {
-        setPersonaModalLoading(false)
+        setAboutModalLoading(false)
       }
     }
 
@@ -173,12 +173,12 @@ const useChatHook = () => {
       return [...state]
     })
 
-    onClosePersonaModal()
+    onCloseAboutModal()
   }
 
   const onEditPersona = async (persona: Persona) => {
     setEditPersona(persona)
-    onOpenPersonaModal()
+    onOpenAboutModal()
   }
 
   const onDeletePersona = (persona: Persona) => {
@@ -247,11 +247,11 @@ const useChatHook = () => {
   }, [personas])
 
   useEffect(() => {
-    if (isInit && !openPersonaPanel && chatList.length === 0) {
+    if (isInit && !openAboutPanel && chatList.length === 0) {
       onCreateChat(DefaultPersonas[0])
     }
     isInit = true
-  }, [chatList, openPersonaPanel, onCreateChat])
+  }, [chatList, openAboutPanel, onCreateChat])
 
   return {
     debug,
@@ -261,13 +261,13 @@ const useChatHook = () => {
     chatList,
     personas,
     editPersona,
-    isOpenPersonaModal,
-    personaModalLoading,
-    openPersonaPanel,
-    personaPanelType,
+    isOpenAboutModal,
+    aboutModalLoading,
+    openAboutPanel,
+    aboutPanelType,
     toggleSidebar,
-    onOpenPersonaModal,
-    onClosePersonaModal,
+    onOpenAboutModal,
+    onCloseAboutModal,
     onCreateChat,
     onDeleteChat,
     onChangeChat,
@@ -275,8 +275,8 @@ const useChatHook = () => {
     onDeletePersona,
     onEditPersona,
     saveMessages,
-    onOpenPersonaPanel,
-    onClosePersonaPanel,
+    onOpenAboutPanel,
+    onCloseAboutPanel,
     onToggleSidebar,
     forceUpdate
   }

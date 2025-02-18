@@ -3,12 +3,12 @@ import { Button, Dialog, Flex, TextArea, TextField } from '@radix-ui/themes'
 import { useForm } from 'react-hook-form'
 import { ChatContext, Persona } from '@/components'
 
-const PersonaModal = () => {
+const AboutModal = () => {
   const {
-    isOpenPersonaModal: open,
+    isOpenAboutModal: open,
     editPersona: detail,
     onCreatePersona,
-    onClosePersonaModal
+    onCloseAboutModal
   } = useContext(ChatContext)
 
   const { register, handleSubmit, setValue } = useForm()
@@ -36,7 +36,7 @@ const PersonaModal = () => {
           </Flex>
           <Flex gap="3" mt="4" justify="end">
             <Dialog.Close>
-              <Button variant="soft" type="button" color="gray" onClick={onClosePersonaModal}>
+              <Button variant="soft" type="button" color="gray" onClick={onCloseAboutModal}>
                 Cancel
               </Button>
             </Dialog.Close>
@@ -52,4 +52,4 @@ const PersonaModal = () => {
   )
 }
 
-export default PersonaModal
+export default AboutModal

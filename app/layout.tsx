@@ -7,10 +7,10 @@ import '@/styles/theme-config.css'
 
 export const metadata = {
   title: {
-    default: 'ChatGPT Lite',
-    template: `%s - ChatGPT Lite`
+    default: 'GridGPT Lite Demo',
+    template: `%s - GridGPT Lite Demo`
   },
-  description: 'AI assistant powered by ChatGPT',
+  description: 'AI assistant powered by GridGPT',
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon-16x16.png',
