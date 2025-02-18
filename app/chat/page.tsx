@@ -17,7 +17,7 @@ const ChatProvider = () => {
           <AboutPanel />
         </div>
       </Flex>
-      {/* <AboutModal /> */}
+      <AboutModal />
     </ChatContext.Provider>
   )
 }

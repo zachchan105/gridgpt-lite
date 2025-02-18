@@ -29,8 +29,8 @@ const AboutPanel = (_props: AboutPanelProps) => {
           <Flex direction="column" gap="8">
             <Box>
               <Text as="p" size="4" className="leading-normal">
-                Simple Chat Interface using the Grid. It's an open-source utility that
-                demonstrates how to leverage The Grid's OpenAI Endpoint, allowing developers to quickly integrate with a
+                Simple Chat Interface using the Grid. It&apos;s an open-source utility that
+                demonstrates how to leverage The Grid&apos;s OpenAI Endpoint, allowing developers to quickly integrate with a
                 Grid Endpoint in thousands of existing applications that support OpenAI.
               </Text>
             </Box>
@@ -69,7 +69,9 @@ const AboutPanel = (_props: AboutPanelProps) => {
                 A Note:
               </Heading>
               <Text as="p" size="3" className="leading-normal">
-                The Grid is a platform in it's early stages, and speed and performance is not yet optimized. We are working on various integrations within The Grid to showcase the functions that can be used by developers worldwide.
+                The Grid is a platform in it&apos;s early stages, and speed and performance is not yet optimized. We are
+                working on various integrations within The Grid to showcase the functions that can be used by
+                developers worldwide.
               </Text>
             </Box>
           </Flex>
