@@ -48,7 +48,7 @@ const AboutPanel = (_props: AboutPanelProps) => {
               <Flex direction="column" gap="4">
                 <Heading size="5">Token Limit (For this demo)</Heading>
                 <Text as="p" size="3" weight="bold">
-                  500
+                  300
                 </Text>
               </Flex>
             </Card>
