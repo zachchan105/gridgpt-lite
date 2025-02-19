@@ -13,7 +13,7 @@ export const DefaultPersonas: Persona[] = [
     id: 'chatgpt',
     role: 'system',
     name: 'GridGPT',
-    prompt: 'You are an AI assistant that helps people find information.',
+    prompt: 'You are an AI assistant that helps people find information. Answer in less than 200 words.',
     isDefault: true
   },
   {
